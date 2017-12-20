@@ -1,8 +1,8 @@
 #FUNCTION TO CREATE TXT FILE W/UNIQUE NAME AND STORE LIST OF FILE STRUCTURE OF
 #REPOSITORY - AUTO AUDIT OF FOLDER STRUCTURE
-import os
-import time
 
+import os, time
+'''
 def qcLogOutput():
     dateTime = time.strftime("%m-%d-%y" + " %H-%M" + ".txt")
     fileName = open(dateTime, 'w')
@@ -14,11 +14,24 @@ def qcLogOutput():
     return
 
 qcLogOutput()
+'''
 
+path = 'C:\\Users\\gilliama\\Documents\\TEST Repository'
+
+def projExe():
+for folders in os.walk(path):
+    if not os.path.exists('Project Execution Documentation'):
+        #email me
+
+'''
+for path, dirs, files in os.walk(path):
+    print(path)
+    for f in files:
+        print (f)
+'''
+
+
+#print(os.walk('C:\\Users\\gilliama\\Documents\\TEST Repository'))
 
 #this script checks for proper hierchy of files in repository
 #auto audit of folder structure
-
-#challenge create script to compare lists of folders in root folder, if one goes
-#missing, email me, look at dir and list, then wait a few mins, check again and
-#compare
